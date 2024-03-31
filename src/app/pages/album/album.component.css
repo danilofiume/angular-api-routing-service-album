@@ -1,0 +1,18 @@
+p.p{
+    border-bottom: 1px solid rgb(218, 217, 217);
+    padding: 0.5em;
+    margin: 0;
+}
+
+.mt-3 {
+    border: 1px solid rgb(218, 217, 217) ;
+    border-radius: 5px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 0.4em;
+    margin: 1em 0;
+    border-radius: 5px;
+}

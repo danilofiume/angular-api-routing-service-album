@@ -1,0 +1,33 @@
+<!-- Se showAlbumList è true, mostra la lista degli album -->
+<div *ngIf="showAlbumList">
+    <div class="mt-3 mb-3">
+      <div class="pdiv" *ngFor="let album of albums">
+        <p class="p">
+        
+          <a [routerLink]="['/album', album.id]" (click)="showAlbumDetails(album.id)">
+            {{ album.title }}
+        </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Se showAlbumList è false, mostra i dettagli dell'album -->
+  <div *ngIf="!showAlbumList">
+
+    <button class="bg-dark" (click)="showAlbumListAgain()">Torna alla lista degli album</button>
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let alb of albumDetails">
+        <div class="card p-0 mx-1 shadow">
+            <a [href]="alb.url">
+            <img [src]="alb.thumbnailUrl" class="card-img-top" [alt]="alb.title">
+            </a>
+            <div class="card-body">
+            <p class="card-text">{{ alb.title }}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+  
